@@ -1,0 +1,53 @@
+{
+  "name": "stickerbot",
+  "version": "1.27.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "node_modules/.bin/eslint --ext js .",
+    "lint:fix": "node_modules/.bin/eslint --fix --ext js ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akechi0523/sticker_bot.git"
+  },
+  "author": "akechi0523",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akechi0523/sticker_bot/issues"
+  },
+  "homepage": "https://github.com/akechi0523/sticker_bot#readme",
+  "dependencies": {
+    "@foile/crypto-pay-api": "^1.0.4",
+    "@pm2/io": "^5.0.0",
+    "bull": "^4.7.0",
+    "dotenv": "^7.0.0",
+    "emoji-regex": "^10.2.1",
+    "error-stack-parser": "^2.0.6",
+    "got": "^10.7.0",
+    "ioredis": "^4.19.4",
+    "limax": "^4.1.0",
+    "moment": "^2.29.2",
+    "mongoose": "^5.13.20",
+    "node-cron": "^3.0.2",
+    "openai": "^4.65.0",
+    "random-word-slugs": "^0.1.6",
+    "sharp": "^0.32.6",
+    "stegcloak": "^0.0.1",
+    "telegraf": "^3.40.0",
+    "telegraf-i18n": "^6.5.0",
+    "telegraf-ratelimit": "^2.0.0",
+    "telegram": "^2.15.15",
+    "unique-names-generator": "^4.7.1",
+    "wallet-pay-sdk": "^1.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}

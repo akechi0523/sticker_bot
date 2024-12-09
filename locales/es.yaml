@@ -1,0 +1,680 @@
+---
+language_name: '🇪🇸 Español'
+name: Bot de pegatinas favorito 🇺🇦
+description:
+  long: |
+    🧙 Soy el mago del paquete de emojis y pegatinas, ¡y estoy aquí para hacer que tu experiencia de mensajería sea más divertida! Mis poderes mágicos me permiten transformar tus fotos, videos y GIF favoritos en divertidos emojis y calcomanías sin la molestia de convertirlos y recortarlos. 🎉🎊 Conmigo puedes crear packs personalizados para cualquier ocasión con tan solo unos clics. ¿Entonces, Qué esperas? ¡Comencemos y agreguemos un poco de ✨chispa✨ a sus chats!
+
+    Buscar pegatinas: https://play.google.com/store/apps/details?id=app.fstik
+  short: |
+    🧙 ¡Soy el mago del emoji y los stickers! Transforma fotos, videos y GIFs en stickers geniales en un instante.
+ratelimit: '¡No tan amenudo!'
+cmd:
+  start:
+    enter: |
+      🧙 Hola, ${name}! Soy el asistente emoji y el pack de pegatinas.
+      Puedo transformar tus fotos, videos, y GIFs en pegatinas frescas con tan solo unos clics
+
+      Envía el comando /help para aprender más sobre lo que puedo hacer
+
+      :speech _balloon: ¿Necesitas ayuda? Únete a nuestro chat de soporte en @fStikCommunity (sólo en inglés)
+    group: |
+      🧙 ¡Hola, ${groupTitle}! Soy el mago de los paquetes de emojis y stickers.
+
+      Para agregar un sticker a un paquete de grupo, utiliza el comando /ss en respuesta a una foto, video, gif o sticker.
+    help: |
+      <b>Lista de comandos del bot:</b>
+
+      /new - Crea un nuevo paquete de pegatinas
+      /new_emoji - Crea un nuevo paquete de emojis
+
+      /delete - Elimina una pegatina de un paquete
+      /original - Encuentra la pegatina original
+
+      /packs - Lista todos tus paquetes
+      /restore - Restaura un paquete eliminado
+      /copy - Copia un paquete
+      /emoji - Cambia el sufijo del emoji para el paquete actual
+      /frame - Cambia el marco para el paquete de video actual
+      /publish - Publica el paquete en el catálogo
+
+      /catalog - Abre el catálogo de paquetes de pegatinas
+
+      /lang - Cambia el idioma
+      /donate - Apoya al desarrollador
+
+      💬 Chat de soporte: @fStikCommunity (solo en inglés)
+
+      🧑‍🔧 Contactos: @ly_oBot
+      👨🏻‍💻 Canal de desarrollo: @LyBlog
+
+      GitHub: https://github.com/LyoSU/fStikBot
+    catalog: |
+      <b>😻 Puede encontrar nuevos paquetes de sticker en nuestro catálogo</b>
+
+      • Haga clic en el botón de abajo y obtener acceso a un enorme catálogo de paquetes de sticker para cada gusto
+      • Buscar por palabras clave o en pestañas preparadas
+      • No olvide calificar para promover o bajar el paquete de sticker en el ranking
+    commands:
+      ss: '🌟 Guardar etiqueta'
+      start: '📜 Start menu'
+      help: '📖 Ayuda'
+      packs: '📁 Administrar paquetes'
+      new: '🌝 Crear paquete de sticker'
+      new_emoji: '😊 Crear paquete emoji'
+      catalog: ':open_libro: Catálogo'
+      publish: '📤 Publicar paquete'
+      delete: '❌ Eliminar sticker'
+      original: '🔍 Find original sticker'
+      restore: '🔀 Restaurar un paquete'
+      copy: '📋 Copiar un paquete'
+      emoji: '📝 Change emoji suffix'
+      round: ':mo-camera: Video redondeado'
+      clear: '🖼️ Quitar fondo de la foto'
+      about: '📦 Información del paquete'
+      user_about: '🧑‍🎨 Creator info'
+      lang: '🌐 Change language'
+      report: '🚨 Reportar paquete'
+      donate: '☕️ Support the developer'
+      add_to_group: '👥 Añadir al grupo'
+      privacy: '🔒 Política de privacidad'
+    btn:
+      new: '📥 Crear nuevo'
+      catalog: '💖 Catálogo abierto'
+      catalog_mini: '💖 Catálogo'
+      catalog_browser: '🌐 Abrir en navegador'
+      catalog_browser_mini: '🌐 En navegador'
+      catalog_app: '📱 Descargar aplicación Android'
+      catalog_app_mini: '📱 App Android'
+  inline:
+    switch_pm: '📁 Seleccione pack'
+  restore: |
+    <b>🗃 Restauración de paquete</b>
+
+    Para restaurar un paquete, debes enviarme un enlace al paquete que deseas restaurar
+  copy: |
+    <b>🗄️ Copie el paquete</b>
+
+    Para copiar otro paquete a uno nuevo, solo tienes que enviarme un enlace a una etiqueta o paquete de emojis
+  report: |
+    <b>🚨 Informe</b>
+
+    Si encuentra un paquete de pegatinas que cree que podría infringir la ley o ir en contra de los Términos de servicio de Telegram, infórmenos enviando su enlace a @ StickersReportBot
+
+    <i>Recuerda que el bot no es responsable del contenido de los packs y no tiene la capacidad de controlarlo</i>
+  packs:
+    info: |
+      <b>📁 Paquetes</b>
+    types:
+      regular: Pegatinas
+      custom_emoji: Emojis
+      inline: Inline
+    empty: |
+      <b>Aún no tienes paquetes.</b>
+      Para crear, escribe un comando /nuevo
+    inline_title: Paquete en línea
+    select_group_pack_info: |
+      <b>📁 Seleccionar paquete</b>
+
+      Para usar el paquete en el grupo, los administradores deben seleccionarlo usando el botón a continuación
+    select_group_pack: Seleccionar paquete
+  emoji:
+    info: |
+      Para cambiar el emoji predeterminado del paquete actual, envía <code>/emoji</code> seguido por el emoji separado por un espacio
+
+      Por ejemplo - <code>/emoji 🌟</code>
+    done: Emoji successfully changed.
+    error: '¡Hubo un error al cambiar el emoji!'
+  round_video:
+    enabled: |
+      Los videos ahora tendrán una forma redondeada
+    disabled: |
+      Los videos ya no tendrán una forma redondeada
+  paysupport: |
+    <b>👨‍💻 Soporte de Pago</b>
+
+    En todos los temas relacionados con el funcionamiento del bot, incluidos los pagos y donaciones, puedes contactar directamente al desarrollador
+
+    <b>Contactos:</b>
+    🧑‍💻 Desarrollador: @ly_oBot
+donate:
+  menu: |
+    <b>☕️ Apoyo al desarrollo del bot</b> Al apoyar el desarrollo del bot, recibirás Créditos\n\n<b>Saldo:</b> <code>${balance}</code> Créditos Con 1 Crédito, tienes la oportunidad de potenciar un pack.\n\n<b>El impulso proporciona los siguientes beneficios:</b> ➖ Deshabilitar "<code>${titleSuffix}</code>" en el nombre de los packs <i>(no en el enlace)</i> ➖ Prioridad al convertir stickers de video ➖ Capacidad de agregar más de un sticker a la cola de procesamiento ➖ Duración de los stickers de video hasta 30 segundos\n\n<b>Selecciona la cantidad de Créditos que deseas comprar:</b>
+  btn:
+    donate: '☕ Donar'
+  topup: |
+    <b>Ingresa la cantidad de Créditos que deseas comprar:</b>
+  invalid_amount: |
+    <b>Cantidad inválida</b>
+
+    La cantidad mínima es 5 Créditos
+  paymenu: |
+    Quieres comprar <b>${amount} Créditos</b> por <b>${price}$</b>
+
+    ⚠️ Los Créditos son emitidos manualmente por el administrador.
+    El tiempo de espera varía de 5 minutos a 1 hora
+
+    <u>Selecciona el método de pago:</u>
+  description: |
+    Al comprar Créditos, apoyas el desarrollo del bot y obtienes la oportunidad de usar funciones adicionales
+  update: |
+    <b>🔄 Actualización de saldo</b>
+
+    Saldo: <code>${balance}</code> Créditos (añadido <code>${amount}</code> Créditos)
+  error:
+    already_donated: |
+      Ya has recibido Créditos por este pago
+    error: |
+      <b>¡Error!</b>
+      Ocurrió un error al procesar el pago
+    canceled: |
+      Pago cancelado
+coedit:
+  info: |
+    <b>👥 Co-editando</b>
+
+    Enlace para co-editar <a href="${link}">${title}</a>: <code>${colink}</code>
+
+    <b>Cómo usar:</b>
+    1. Envía el enlace a la persona que quieres dar acceso al paquete
+    2. Después de hacer clic en el enlace, deben presionar "Iniciar" y se añadirán a los editores
+    3. El editor puede añadir, borre y edite stickers en el paquete
+
+    <b>Editors:</b>
+    ${editors}
+
+    <i>Para eliminar editores, necesitas reiniciar el enlace</i>
+  no_editors: |
+    Aún no hay editores
+  btn:
+    send: '📤 Enviar enlace'
+    reset: '🔁 Reset link'
+  share: |
+    Sigue el enlace y pulsa "Iniciar" para coeditar el pack "${title}"
+  reset: |
+    <b>🔁 Restablecimiento de enlace exitoso</b>
+
+    Nuevo enlace para coedición <a href="${link}">${title}</a>:
+    <code>${colink}</code>
+callback:
+  pack:
+    answerCbQuer:
+      not_found: Paquete no encontrado
+      hidden: Paquete escondido correctamente
+      restored: Paquete restaurado correctamente
+    set_pack: |
+      🌟 Seleccionado <a href="${link}">${title}</a> pack
+
+      <b>❔ ¿Cómo añadir?</b>
+      Envía foto, vídeo o pegatinas para añadir al paquete
+    set_inline_pack: |
+      Paquete seleccionado <u>${title}</u>
+
+      Para usarlo, escribe en cualquier chat <code>@${botUsername} </code>y espacio
+      También puedes usarlo presionando el botón debajo
+    boost:
+      info: |
+        \n⚡ <b><a href="https://t.me/${botUsername}?start=boost">Boost</a></b>: ${boostStatus}
+      status:
+        on: Activado
+        off: Deshabilitado
+    hidden: Empaca <a href="${link}">${title}</a> oculto de tu lista.
+    restored: Pack <a href="${link}">${title}</a> restaurado a tu lista.
+    btn:
+      hide: '❌ Ocultar paquete'
+      delete: '🗑️ Eliminar paquete'
+      restore: 'Recuperar'
+      use_pack: '📦 Usar paquete'
+      boost: '⚡ Boost'
+      frame: '🖼 Frame'
+      rename: '✏️ Rename'
+      search_gif: '🔎 Search GIF'
+      coedit: '👥 Co-edición'
+      catalog_add: '🗂 Add to catalog'
+      catalog_edit: '📝 Editar en catálogo'
+      catalog_delete: '🗑️ Eliminar del catálogo'
+      catalog_share: '🔗 Compartir'
+      catalog_open: '📂 Abrir en catálogo'
+    error:
+      restore: |
+        <b>Error!</b>
+        No se puede restaurar el paquete.
+      copy: |
+        <b>Error!</b>
+        No se puede encontrar el paquete.
+    select_group:
+      success: |
+        Paquete <a href="${link}">${title} </a> seleccionado exitosamente para el grupo.
+      access_rights:
+        add: '¿Quién puede agregar stickers al paquete del grupo?'
+        delete: '¿Quién puede eliminar stickers del paquete del grupo?'
+        rights:
+          all: Todos
+          admins: Solo administradores
+      error: |
+        <b> ¡Error!</b>
+        Conjunto no encontrado.
+  sticker:
+    answerCbQuery:
+      delete: La etiqueta se eliminó con éxito del paquete.
+      restored: La etiqueta se ha guardado correctamente en el paquete actual.
+    delete: La etiqueta se eliminó con éxito del paquete.
+    restored: La etiqueta se ha guardado correctamente en el paquete actual.
+    btn:
+      delete: '🗑 Eliminar'
+      copy: '🌟 Copiar'
+      restore: 'Recuperar'
+    error:
+      not_found: |
+        ¡Error!
+        No se pudo encontrar el pack de stickers.
+  group_settings:
+    success: |
+      Configuración del grupo actualizada con éxito.
+sticker:
+  add:
+    ok: |
+      <b>Agregado con éxito al paquete:</b>
+      <a href="${link}">${title}</a>
+
+      En una hora, este paquete se actualizará para todos los usuarios.
+
+      <i>Envía uno o más emojis que coincidan con la pegatina, si quieres agregarlos.</i>
+    ok_inline: |
+      <b>Se ha añadido al paquete correctamente:</b>
+      <u>${title}</u>
+    send_emoji: Genial, ahora envía el emoji que corresponde a
+    converting_process: |
+      <b>Espera...</b>
+      Tu archivo está en la cola para la conversión. Espera a que se complete. Esto puede tardar un poco.
+
+      Progreso: ${progress} / ${total}
+
+      <i>Los usuarios que apoyaron al bot tienen prioridad en la cola (más info: /donate)</i>
+    catalog_offer: |
+      <b>😲 ¡Guau, hiciste un gran paquete!</b>
+
+      ¿Te gustaría agregar <a href="${link}">${title}</a> al catálogo público de stickers para que otros usuarios del bot también puedan verlo?
+      <i>No lleva mucho tiempo</i>
+    quote: |
+      Utiliza @QuotlyBot para crear una cita a partir de este mensaje
+    error:
+      reply: |
+        <b>Error!</b>
+        Por favor, responde al sticker.
+      no_selected_pack: |
+        <b>No has seleccionado un pack</b>
+
+        Por favor, crea (/new) o elige (/packs) pack
+      no_selected_group_pack: |
+        <b>No ha seleccionado un paquete de grupo</b>
+
+        Por favor, seleccione un paquete usando el comando /packs
+      no_rights: |
+        <b>¡Error!</b>
+        No tiene derecho a agregar stickers a este paquete.
+      stickers_too_much: |
+        Este paquete tiene el número máximo de pegatinas.
+
+        Puedes crear un nuevo paquete usando el comando /new.
+      have_already: |
+        <b>Esta pegatina ya está en el paquete</b>
+
+        Si quieres cambiar el emoji, envíalo en el siguiente mensaje.
+      stickerset_invalid: |
+        <b>Error!</b>
+        Bot no puede acceder al paquete seleccionado actualmente.
+
+        Por favor, cree (/new) o elija (/packs) otro paquete.
+      file_type:
+        static: |
+          <b>¡Error!</b>
+          Este tipo de archivo no es compatible
+          Puedes agregar esta foto o pegatina estática al paquete estático
+
+          <i>Crear (/nuevo) o elegir (/paquetes) otro paquete</i>
+        video: |
+          <b>¡Error!</b>
+          Este tipo de archivo no es compatible
+          Puede agregar estos archivos de video al paquete de videos
+
+          <i>Crear (/nuevo) o elegir (/ paquetes) otro paquete</i>
+        animated: |
+          <b>¡Error!</b>
+          Este tipo de archivo no es compatible
+          Puedes agregar estos archivos animados al paquete de vectores
+
+          <i>Crear (/nuevo) o elegir (/ paquetes) otro paquete</i>
+        unknown: |
+          <b>Error!</b>
+          Este tipo de archivo no es compatible con
+
+          <i>Crear (/new) o elegir (/packs) otro paquete</i>
+      wait_load: |
+        <b>¡Espera!</b>
+
+        El bot aún está procesando el archivo anterior...
+        Puedes apoyar el desarrollo del bot (/donate) para aumentar la prioridad del procesamiento y la capacidad de añadir más de un sticker a la cola.
+      timeout: |
+        <b>Por el momento, el bot está experimentando una enorme carga</b>
+        Por lo tanto, la conversión de vídeo solo está disponible para paquetes con potenciador activo
+
+        Para más detalles, sigue /donate
+      convert: |
+        <b>Error!</b>
+        Desafortunadamente, el bot no pudo convertir tu video.
+
+        Tal vez tu vídeo se guarde en un formato inviable para el bot. Asegúrese de que está en formato mp4.
+        También puede ser un error interno del bot, intente enviar este video de nuevo.
+      too_big: |
+        <b>Error!</b>.
+
+        El archivo es demasiado grande para procesar. Por favor, reduce la calidad y duración antes de enviar.
+news:
+  join: |
+    i <a href="${link}">Únete a nuestro canal</a> para obtener las últimas noticias sobre el bot.
+
+    <i>Suscríbete al canal para obtener las últimas noticias sobre el bot, así como actualizaciones y nuevas características.</i>
+  join_btn: '📢 Unirse al canal'
+  not_joined: '🙅 No estás suscrito al canal'
+  continue: '✅ Continuar'
+userAbout:
+  help: |
+    <b>🧑‍🎨 Usuario sobre</b>
+
+    Usando este menú puedes encontrar información sobre el usuario y sus paquetes de stickers
+
+    Para obtener información sobre el usuario, usa el botón abajo o reenviar su mensaje
+  result: |
+    <b>🧑‍🎨 Información del usuario</b>
+    <b>🆔 ID del usuario:</b> <code>${userId}</code>
+    <b>🎨 Packs de este usuario:</b>
+    ${packs}
+  no_packs: |
+    <i>No tenemos información sobre stickers de este propietario</i>
+  forward_hidden: |
+    El usuario ha ocultado la capacidad de reenviar mensajes. Utilice el botón de abajo para ver sus paquetes de etiquetas.
+  select_user: '🧑‍🎨 Seleccionar usuario'
+scenes:
+  new_pack:
+    pack_type: |
+      <b><u>Elija el tipo de paquete</u></b>
+    regular: '😊 Sticker'
+    custom_emoji: '🌟 Emoji (premium)'
+    static: '🌟 Static'
+    animated: '✨ Vector'
+    video: '📹 Video'
+    pack_format: |
+      <b><u>Elija el tipo de paquete</u></b>
+
+      <b>Común</b> - estático (no se mueva), raster, formato de archivo - antes de añadir PNG (el bot está procesando), después de añadir - WEBP.
+      Un ejemplo de un paquete normal - t.me/addstickers/Animals
+
+      <b>Video</b> - paquete de vídeo de animación. Puede añadir cualquier vídeo, gif y foto.
+      pack de vídeo de muestra - t. e/addstickers/La mascota
+
+      <b>Animada</b> - vector animado, (tienen una descripción exacta de los objetos dentro del archivo, debido a que se muestran claramente en cualquier escala), formato de archivo - TGS, una variación del formato Lottie.
+      Un ejemplo de un paquete animado - t.me/addstickers/IsabelleShizue
+
+      <i>juegos animados y pegatinas de vídeo pueden tener hasta 50 pegatinas. Los conjuntos estáticos de pegatinas pueden tener hasta 120 pegatinas.</i>
+    pack_title: |
+      <b>Introduzca un nombre para el nuevo pack de stickers:</b>
+      <i>También puede elegir un nombre generado aleatoriamente a continuación.</i>
+    pack_name: |
+      <b>Ingrese un enlace corto para un nuevo paquete de stickers:</b>
+
+      <i>Por ejemplo, este paquete usa 'Animales' como enlace corto: https://t.me/ addstickers/<u>Animales</u></i>
+      <i>Puede elegir un enlace corto aleatorio en el botón.</i>
+    ok: |
+      Pack <a href="${link}">${title}</a> creado con éxito!
+
+      <b>Pack enlace:</b> <pre>${link}</pre>
+
+      Envía un archivo, foto, vídeo o sticker para que lo añada a tu conjunto
+    error:
+      title_long: El nombre no debe tener más de ${max} caracteres.
+      name_long: El enlace no debe tener más de ${max} caracteres.
+      telegram:
+        name_invalid: Este enlace no se puede utilizar.
+        name_occupied: Este enlace ya está en uso.
+        upload_failed: |
+          <b>Error!</b>
+          Bot no puede subir stickers a Telegram.
+
+          Por favor, inténtalo de nuevo más tarde.
+  copy:
+    enter: |
+      Puedo copiarlo, pero antes de eso, vamos a crear un nuevo paquete
+    progress: |
+      Copiando paquete de <a href="${originalLink}">${originalTitle}</a> a <a href="${link}">${title}</a>
+
+      Progreso: ${current}/${total}
+    done: |
+      La copia del paquete de <a href="${originalLink}">${originalTitle}</a> a <a href="${link}">${title}</a> se completó con éxito.
+    pay: |
+      <b>Conversión de pack</b>
+
+      Convertir un paquete de un tipo a otro cuesta 1 crédito
+
+      <b>Saldo actual:</b> ${balance} Créditos
+
+      Comprar créditos: /donate
+    pay_btn: '✅ Confirmar'
+    error:
+      premium: |
+        <b>¡Error!</b>
+        Desafortunadamente, esta función solo está disponible para aquellos que han apoyado el bot.
+
+        Puedes hacerlo enviando el comando /donate.
+  original:
+    enter: |
+      Envíe el sticker que se agregó a través de este bot y le mostraré la original.
+    error:
+      not_found: |
+        <b>¡Error!</b>
+        No pude encontrar el sticker original.
+  delete:
+    enter: |
+      Enviar la etiqueta que se añadió a través de este bot y la eliminaré del paquete.
+    confirm: |
+      ¿Está seguro que desea eliminar esta etiqueta?
+    error:
+      not_found: |
+        <b>Error!</b>
+        No pude encontrar el sticker.
+  rename:
+    enter_name: |
+      <b>Ingresa un nuevo título para <a href="${link}">${title}</a>:</b>
+    success: |
+      <b>Título cambiado con éxito!</b>
+
+      Nuevo título: <a href="${link}">${title}</a>
+    boost_notice: |
+      ❕ Para eliminar el sufijo "<code>${titleSuffix}</code>", necesitas potenciar el pack. Más detalles en el menú visitando: /donate
+  packAbout:
+    enter: |
+      <b>Envíame una pegatina o un emoji personalizado para buscar información al respecto:</b>
+    not_found: |
+      No pude encontrar la etiqueta
+    result: |
+      <b>📦 Pack:</b> <a href="${link}">${name}</a>
+      🆔 <code>${setId}</code> <i>(Número único para los paquetes del propietario, incrementado por paquete)</i>
+
+      🧑‍🎨 Propietario: <code>${ownerId}</code>
+      ${mention}
+
+      <b>🎨 Otros paquetes de este propietario:</b>
+      ${otherPacks}
+    no_other_packs: |
+      <i>No tenemos información sobre otros stickers de este propietario</i>
+  boost:
+    sure: |
+      <b>¿Estás seguro de que quieres impulsar <a href="${link}">${title}</a>?</b>
+
+      Impulsar aumentará la prioridad de procesamiento y la capacidad para agregar más de un sticker a la cola
+      Puedes encontrar información más detallada sobre los impulsos en el menú visitando: /donate
+
+      <b>Precio:</b> 1 Crédito
+      <b>Saldo actual:</b> ${balance} Créditos
+    btn:
+      yes: Sí, ¡optimizar!
+      no: No, cancelar
+    canceled: |
+      Optimización cancelada
+    success: |
+      ¡Optimización completada con éxito!
+
+      ${title} ha sido optimizada
+    error:
+      not_enough_credits: |
+        No tienes suficientes Créditos para impulsar este pack.
+
+        Puedes recargar tu saldo enviando el comando /donate.
+      already_boosted: |
+        Este paquete ya está optimizado.
+  catalog:
+    publish:
+      publish_new: |
+        👌 <b>Envíame la pegatina del paquete que quieres publicar</b>
+
+        <i>Puedes publicar cualquier paquete que te pertenezca, incluso si fueron creados en otro lugar</i>
+      owner_proof: |
+        <b>Para verificar la propiedad de este paquete, debe seguir unos sencillos pasos:</b>
+        1. Abra el bot @Stickers
+        2. Envíe <code>/packstats</code> comando
+        3. Busque y elija el paquete requerido
+        4. Reenvíe el mensaje recibido al bot
+      publish_new_access_denied: |
+        <b>Error!</b>
+        Este paquete no es tuyo.
+
+        Solo puede publicar sus propios paquetes
+      bannded: |
+        <b>Error!</b>
+        Está prohibido utilizar esta función.
+        Por favor, póngase en contacto con el administrador.
+      enter: |
+        Estás a punto de publicar el paquete "<a href="${link}">${title}</a>" en el directorio público de nuestro bot
+        Puede ser encontrado por cualquier usuario del bot por nombre, etiquetas o filtro.
+        Debido a esto, más personas instalarán tu paquete
+        Intenta enviar solo paquetes de alta calidad que puedan ser de interés para un gran número de personas
+
+        <b>Reglas para publicar paquetes:</b>
+        • No publique sus paquetes personales destinados a un círculo reducido de personas. Por ejemplo, como las caras de tus amigos o citas de tus mensajes
+        • No publiques etiquetas adhesivas que violen las leyes de la UE u otras leyes locales
+
+        Deberás enviar información adicional para que sea publicado en el catalogo
+      continue_button: Continuar
+      enter_description: |
+        <b>describe brevemente tu paquete para que otros puedan encontrarlo</b>
+
+        <i>También puedes usar hashtags para categorizar [#]</i>
+        <i>Por ejemplo: #anime #meme #animals #cute #kpop #funny #cat #game </i>
+      select_language: |
+        <b>Elige para qué idiomas es tu paquete:</b>
+        <i>Puedes seleccionar varios idiomas</i>
+      button_all_languages: All languages
+      button_confirm_language: Confirm
+      set_safe: |
+        <b>¿Tu paquete es seguro para los usuarios?</b>
+        <i>Es decir, no contiene erótica y otro contenido impactante</i>
+      button_safe:
+        safe: Sí, es seguro
+        not_safe: No, no es seguro
+      no_tags: no se especificó
+      confirm: |
+        <b>Confirme la publicación del paquete "<a href="${link}">${title}</a>"</b>
+
+        <b>Descripción:</b> <i>${description}</i>
+
+        <b>Etiquetas:</b> ${tags}
+        <b>Idiomas:</b> ${languages}
+      button_confirm: '✅ Confirmar publicación'
+      success: |
+        ¡Enhorabuena, tu pack ha sido publicado en el directorio general de nuestro bot donde otros usuarios pueden encontrarlo!
+
+        Puede editar la información de búsqueda del paquete seleccionando el paquete con el comando /packs.
+
+        <i>Te recordamos que las estadísticas de tu pack las puedes ver a través del bot oficial @Stickers</i>
+    unpublish:
+      success: |
+        El paquete se ha despublicado correctamente del catálogo de bots.
+  delete_pack:
+    enter: |
+      ¿Estás seguro de que deseas eliminar el paquete <a href="${link}">${title}</a>?
+      Se eliminará permanentemente y no se podrá recuperar.
+
+      Si desea eliminar solo una etiqueta, use el comando /delete.
+
+      Envía <code>${confirm}</code> para confirmar que realmente deseas eliminar este paquete.
+    confirm: Sí, estoy totalmente seguro.
+    success: |
+      <b>¡Paquete eliminado exitosamente!</b>
+    error:
+      - <b>¡Error!</b>
+      - Ups, algo salió mal.
+  frame:
+    no_video: |
+      <b>Error!</b>
+      Solo puede añadir fotogramas a los paquetes de vídeo.
+    select_type: |
+      <a href="${example}">&#8203;</a><b>Elegir tipo de marco:</b>
+      El marco es un fondo transparente alrededor de la pegatina
+
+      <code>lite</code> — las esquinas se cortarán un poco
+      <code>medio</code> — las esquinas se cortarán más
+      <code>redondeadas</code> — las esquinas se redondearán
+      <code>cuadradas</code> — la forma rectangular del marco, es decir, no se cambiará de ninguna manera
+      <code>círculo</code> — el marco será en forma de un círculo
+
+      <i>En el futuro, puedes usar el comando /frame para establecer el tipo de frame</i>
+    types:
+      lite: '1. Lite'
+      medium: '2. Medio'
+      rounded: '3. Redondeado'
+      square: '4. Cuadrado'
+      circle: '5. Círculo'
+    selected: |
+      <b>Tipo de fotograma seleccionado:</b> ${type}
+  photoClear:
+    enter: |
+      Envía una <u>foto</u> desde la que quieres eliminar el fondo y enviaré el archivo sin el fondo
+
+      <i>funciona mejor con fotos. Funciona peor con dibujos, ilustraciones, etc.</i>
+    enter_anime: |
+      Envía una <u>foto</u> de la que quieres eliminar el fondo y enviaré el archivo sin el fondo
+
+      <i>Funciona mejor con imágenes de anime</i>
+    choose_model: |
+      <b>Elegir modelo:</b>
+    web_app: WebApp - para fotos con personas
+    model:
+      ordinary: Común — para fotos con personas
+      general: General — para cualquier foto
+      anime: Anime — para imágenes de anime
+    add_to_set_btn: '🌟 Añadir al conjunto'
+    error: |
+      <b>Error!</b>
+      Opps, algo salió mal.
+  leave: |
+    Acción cancelada.
+  btn:
+    cancel: '❌ Cancelar'
+error:
+  telegram: |
+    <b>Telegram dió un error!</b>
+    <code>${error}</code>
+  answerCbQuery:
+    telegram: |
+      Telegram dió un error:
+      ${error}
+  banned: |
+    <b>¡Error!</b>
+    Está prohibido utilizar esta función.
+
+    <i>Si piensas que esto es un error, por favor contacta al administrador: @ly_oBot</i>
+  unknown: |
+    <b>Se ha producido un error desconocido, por favor intente nuevamente.</b>
+
+    Si el problema persiste, escriba a @Ly_oBot.
+    Por favor escriba inmediatamente sobre qué bot está hablando y describa el problema en detalle en un solo mensaje.

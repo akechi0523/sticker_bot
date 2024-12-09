@@ -1,0 +1,647 @@
+---
+language_name: '🇺🇿 O''zbek'
+name: Sevimli stikerlar boti 🇺🇦
+description:
+  long: |
+    🧙 Xabar almashish tajribangizni ko'proq e'lon qilish uchun men emoji va stiker paketlarining mag'ribiyasiman. Men sevimli rasmlaringizni, videolaringizni va GIFlaringizni chiroyli emoji va stikerlarga aylantirishga ruxsat beradi. 🎉🎊 Men bilan siz har qanday tadbir uchun shaxsiy paketlar yarata olasiz. Qo'shimcha yoqimli suhbatlaringiz uchun boshladik!
+
+    Stikerlarni qidirish: https://play.google.com/store/apps/details?id=app.fstik
+  short: |
+    🧙 Men emoji va stiker ustasiyman! Rasmlarni, videolarni va GIFlarni jadallashtirib ajoyib stikerlarga aylantiramiz.
+ratelimit: Bunchalik tez-tez emas!
+cmd:
+  start:
+    enter: |
+      🧙 Salom, ${name}! Men emoji va stikerlar to‘plami ustasiman.
+      Men bir necha marta bosish orqali rasmlaringiz, videolaringiz va GIF-fayllaringizni ajoyib stikerlarga aylantira olaman
+
+      Nima qila olishim haqida ko'proq bilish uchun /help buyrug'ini yuboring
+
+      💬 Yordam kerakmi? @fStikCommunity sahifasidagi qo'llab-quvvatlash chatimizga qo'shiling (faqat ingliz tilida)
+    group: |
+      🧙 Salom, ${groupTitle}! Men emoji va stiker paketi sehrgariman.
+
+      Guruh paketiga stiker qo'shish uchun, rasim, video, gif yoki stikerni javobida /ss buyrug'idan foydalaning.
+    help: |
+      <b>Bot komandalari ro‘yxati:</b>\n\n\/yangi - Yangi stiker to‘plamini yaratish\n\/yangi_emoji - Yangi emoji to‘plamini yaratish\n\n\/o‘chirish - Stikerni to‘plamdan o‘chirish\n\/asal - Asal stikerni topish\n\n\/to‘plamlar - Barcha to‘plamlaringiz ro‘yxati\n\/qayta - O‘chirilgan to‘plamni tiklash\n\/nusxa - Bir to‘plamni nusxa olish\n\/emoji - Hozirgi to‘plam uchun emoji suffiksini o‘zgartirish\n\/rəmz - Hozirgi video to‘plam uchun ramka o‘zgartirish\n\/nashr - To‘plamni katalogda nashr etish\n\n\/katalog - Sticker to‘plam katalogini ochish\n\n\/til - Tilni o‘zgartirish\n\/qo‘llab-quvvatlash - Dasturchini qo‘llab-quvvatlash\n\n💬 Qo‘llab-quvvatlash chati: @fStikCommunity (faqat ingliz tili)\n\n🧑‍🔧 Aloqa: @ly_oBot\n👨🏻‍💻 Developer kanali: @LyBlog\n\nGitHub: https:\/\/github.com\/-LyoSU\/fStikBot
+    catalog: |
+      <b>😻 Siz bizning katalogimizda yangi stikerlar to‘plamini topishingiz mumkin</b>
+
+      • Quyidagi tugmani bosing va har qanday didga mos stikerlar to‘plamining ulkan katalogiga kirish huquqiga ega bo‘ling
+      • Kalit so‘zlar yoki tayyorlangan varaqlar bo‘yicha qidiring
+      • Tashviqot uchun baho berishni unutmang. yoki stikerlar to'plamini reytingda pasaytiring
+    commands:
+      ss: '🌟 Stikerni saqlang'
+      start: '📜 Start menu'
+      help: '📖 Ma''lumotnoma'
+      packs: '📁 Paketlarni boshqaring'
+      new: '🌝 Stikerlar toʻplami yarating'
+      new_emoji: '😊 Emoji toʻplami yarating'
+      catalog: '📖 Katalog'
+      publish: '📤 Paketni nashr qilish'
+      delete: '❌ Stikerni oʻchirish'
+      original: '🔍 Find original sticker'
+      restore: '🔀 Paketni tiklang'
+      copy: '📋 Paketdan nusxa oling'
+      emoji: '📝 Change emoji suffix'
+      round: '🎥 Dumaloq shakldagi video'
+      clear: '🖼️ Suratdan fonni olib tashlang'
+      about: '📦 Paket haqida ma''lumot'
+      user_about: '🧑‍🎨 Ijodkor haqida maʼlumot'
+      lang: '🌐 Change language'
+      report: '🚨 Hisobot to''plami'
+      donate: '☕️ Support the developer'
+      add_to_group: '👥 Guruhga qo''shish'
+      privacy: '🔒 Maxfiylik siyosati'
+    btn:
+      new: '📥 Create new'
+      catalog: '💖 Katalogni ochish'
+      catalog_mini: '💖 Katalog'
+      catalog_browser: '🌐 Brauzerda oching'
+      catalog_browser_mini: '🌐 Brauzerda'
+      catalog_app: '📱 Android ilovasini yuklab oling'
+      catalog_app_mini: '📱 Android ilovasi'
+  inline:
+    switch_pm: '📁 To''plamni tanlang'
+  restore: |
+    <b>🗃 Paketni tiklash</b>
+
+    Paketni tiklash uchun siz tiklamoqchi bo'lgan paketga havolani yuborishingiz kerak.
+  copy: |
+    <b>🗄 Toʻplamni nusxalash</b>
+
+    Boshqa paketni yangisiga nusxalash uchun menga stiker yoki kulgichlar toʻplamiga havola yuborish kifoya.
+  report: |
+    <b>🚨 Xabar berish</b>
+
+    Agar qonunni buzishi yoki Telegramning xizmat koʻrsatish shartlariga zid kelishi mumkin boʻlgan stikerlar toʻplamiga duch kelsangiz, iltimos, uning havolasini @ manziliga yuborib, bizga xabar bering. StickersReportBot
+
+    <i>Esda tutingki, bot paketlar mazmuni uchun javobgar emas va uni boshqarish imkoniga ega emas</i>
+  packs:
+    info: |
+      <b>📁 Paketlar</b>
+    types:
+      regular: Stikerlar
+      custom_emoji: Emojilar
+      inline: Inline
+    empty: |
+      <b>Sizda hali hech qanday paket yo'q.</b>
+      Yaratish uchun /new buyrug'ini yozing
+    inline_title: Inline paketi
+    select_group_pack_info: |
+      <b>📁 Paketni tanlash</b>
+
+      Guruhda paketni ishlatish uchun, administratorlar pastdagi tugmani bosib uni tanlashlari kerak
+    select_group_pack: Paketni tanlash
+  emoji:
+    info: |
+      Жорий гуруҳ учун эмоджиларни қайта йўналтириш учун <code>/emoji</code> жўнатинг, кейинги эмоджиларни бўш майдон билан ажратинг
+
+      Масалан - <code>/emoji 🌟</code>
+    done: Emoji muvaffaqiyatli oʻzgartirildi.
+    error: There was an error changing emoji!
+  round_video:
+    enabled: |
+      Videolar endi yumaloq shaklga ega bo'ladi
+    disabled: |
+      Videolar endi yumaloq shaklga ega bo‘lmaydi
+  paysupport: |
+    <b>👨‍💻 To'lov yordami</b>
+
+    Bot faoliyati bilan bog'liq barcha masalalar, jumladan to'lovlar va xayr-ehsonlar yuzasidan to'g'ridan-to'g'ri ishlab chiquvchiga murojaat qilishingiz mumkin
+
+    <b>Aloqalar:</b>
+    🧑‍💻 Ishlab chiquvchi: @ly_oBot
+donate:
+  menu: |
+    <b>☕️ Bot ishlab chiqishni qo'llab-quvvatlash</b>\nBotning rivojlanishini qo'llab-quvvatlab, siz Kreditlar olasiz\n\n<b>Balans:</b> <code>${balance}</code> Kreditlar\n1 Kredit bilan, siz bir quti boost qilish imkoniyatiga egasiz.\n\n<b>Boost quyidagi foydalarni beradi:</b>\n➖ "<code>${titleSuffix}</code>" qutilari nomini o'chirish <i>(havolada emas)</i>\n➖ Video stikerlarni konvertatsiya qilishda ustuvorlik\n➖ Birinchi navbatda bir nechta stikerlarni joriy qilish imkoniyati\n➖ Video stikerlar davomiyligi 30 soniyagacha\n\n<b>Xarid qilish uchun Kreditlar miqdorini tanlang:</b>
+  btn:
+    donate: '☕️ Xayriya qiling'
+  topup: |
+    <b>Xarid qilish uchun Kreditlar miqdorini kirit:</b>
+  invalid_amount: |
+    <b>Noto'g'ri miqdor</b>
+
+    Minimal miqdor 5 Kredit
+  paymenu: |
+    Siz <b>${amount} Kredit</b> ni <b>${price}$</b> ga sotib olmoqchisiz
+
+    ⚠️ Kreditlar administrator tomonidan qo'lda beriladi.
+    Kutish vaqti 5 daqiqadan 1 soatgacha
+
+    <u>To'lov usulini tanlang:</u>
+  description: |
+    Kreditlarni sotib olib, siz botni rivojlantirishga yordam berasiz va qo'shimcha xususiyatlardan foydalanish imkoniyatiga ega bo'lasiz
+  update: |
+    <b>🔄 Balans yangilanishi</b>
+
+    Balans: <code>${balance}</code> Kreditlar (qo'shildi <code>${amount}</code> Kreditlar)
+  error:
+    already_donated: |
+      Siz bu to'lov uchun allaqachon Kreditlarni oldingiz
+    error: |
+      <b>Xato!</b>
+      To'lovni qayta ishlashda xato yuz berdi
+    canceled: |
+      To'lov bekor qilindi
+coedit:
+  info: |
+    <b>👥 Ҳамкорлик</b>
+
+    Ҳамкорлик учун ҳавола <a href="${link}">${title}</a>: <code>${colink}</code>
+
+    <b>Қўллаш усули:</b>
+    1. Ўтказиш керак бўлган кишига ҳаволани юборинг
+    2. Ҳаволаға босқан киши “бошлаш” тугмасини босиб, тахрирчилар қаторига қўшилади
+    3. Тахрирчи тахрир қила, ўчиради ва стикерларни қўшишни бажаришга имконият беради
+
+    <b>Тахрирчилар:</b>
+    ${editors}
+
+    <i>Тахрирчиларни олиб ташлаш учун, ҳаволани кайта олиш керак</i>
+  no_editors: |
+    Hozircha muharrirlar yo'q
+  btn:
+    send: '📤 Havolani yuboring'
+    reset: '🔁 Havolani tiklash'
+  share: |
+    Havolani kuzatib boring va "${title}" to'plamini birgalikda tahrirlash uchun "start" tugmasini bosing.
+  reset: |
+    <b>🔁 Havolani tiklash muvaffaqiyatli amalga oshirildi</b>
+
+    Birgalikda tahrirlash uchun yangi havola <a href="${link}">${title}</a>:
+    <code>${colink}</code>
+callback:
+  pack:
+    answerCbQuer:
+      not_found: Paket topilmadi
+      hidden: Paket muvaffaqiyatli yashirildi
+      restored: Paket muvaffaqiyatli tiklandi
+    set_pack: |
+      🌟 Tanlangan <a href="${link}">${title}</a> toʻplami
+
+      <b>❔ Qanday qilib qoʻshiladi?</b>
+      Paketga qo'shish uchun fotosurat, video yoki stiker yuboring
+    set_inline_pack: |
+      Танланган <u>${title}</u> гуруҳ
+
+      Уни кўрсатиш учун, ичидагиларда <code>@${botUsername}</code> ни босинг ва куч пасткини босинг
+    boost:
+      info: |
+        \n⚡ <b><a href="https:\/\/t.me\/${botUsername}?start=boost">Boost</a></b>: ${boostStatus}
+      status:
+        on: Yoqilgan
+        off: O'chirilgan
+    hidden: Toʻplam <a href="${link}">${title}</a> roʻyxatingizdan yashirilgan.
+    restored: <a href="${link}">${title}</a> toʻplami roʻyxatingizga tiklandi.
+    btn:
+      hide: '❌ Paketni yashirish'
+      delete: '🗑 Paketni o''chirish'
+      restore: '✅ Qayta tiklash'
+      use_pack: '📦 Paketdan foydalaning'
+      boost: '⚡ Kuchaytiring'
+      frame: '🖼 Ramka'
+      rename: '✏️ Nomini oʻzgartirish'
+      search_gif: '🔎 Search GIF'
+      coedit: '👥 Birgalikda tahrirlash'
+      catalog_add: '🗂 Add to catalog'
+      catalog_edit: '📝 Katalogda tahrirlash'
+      catalog_delete: '🗑 Katalogdan oʻchirish'
+      catalog_share: '🔗️️ Ulashish'
+      catalog_open: '📂 Katalogda ochish'
+    error:
+      restore: |
+        <b>Xato!</b>
+        Paketni tiklab bo'lmadi.
+      copy: |
+        <b>Xato!</b>
+        Paket topilmadi.
+    select_group:
+      success: |
+        Paket <a href="${link}">${title}</a> muvaffaqiyatli guruhga tanlandi.
+      access_rights:
+        add: Kimlar guruh paketiga stiker qo'shishi mumkin?
+        delete: Kimlar guruh paketidan stikerlarni o'chirishi mumkin?
+        rights:
+          all: Hamma
+          admins: Faqat adminlar
+      error: |
+        <b>Xatolik!</b>
+        To'plam topilmadi.
+  sticker:
+    answerCbQuery:
+      delete: Stiker paketdan muvaffaqiyatli olib tashlandi.
+      restored: Stiker joriy paketga muvaffaqiyatli saqlandi.
+    delete: Stiker paketdan muvaffaqiyatli olib tashlandi.
+    restored: Stiker joriy paketga muvaffaqiyatli saqlandi.
+    btn:
+      delete: '🗑O''chirish'
+      copy: '🌟Nusxalash'
+      restore: '✅Qayta tiklash'
+    error:
+      not_found: |
+        Tizimda xatolik!
+        Stikerni topib bo'lmadi.
+  group_settings:
+    success: |
+      Guruh sozlamalari muvaffaqiyatli yangilandi.
+sticker:
+  add:
+    ok: |
+      <b>Uddoqqi paketga muvaffaqiyatli qo'shildi:</b>\n<a href="${link}">${title}</a>\n\nBir soat ichida, bu paket barcha foydalanuvchilar uchun yangilangan bo'ladi.\n\n<i>Agardan emoji yoki bir nechta emoji yuboring, agar ularni qo'shmoqchi bo'lsangiz.</i>
+    ok_inline: |
+      <b>Paketga muvaffaqiyatli qo'shildi:</b>
+      <u>${title}</u>
+    send_emoji: Great, now send the emoji that matches the
+    converting_process: |
+      <b>Wait...</b>
+      Your file is in the queue for conversion. Wait for completion. This may take some time.
+
+      Progress: ${progress} \/ ${total}
+
+      <i>Users who supported the bot get priority in the queue (more: \/donate)</i>
+    catalog_offer: |
+      <b>😲 Voy, ajoyib toʻplam yasadingiz!</b>
+
+      Botning boshqa foydalanuvchilari ham koʻrishi uchun umumiy stikerlar katalogiga <a href="${link}">${title}</a> qoʻshmoqchimisiz?
+      <i>Bu ko'p vaqt talab qilmaydi</i>
+    quote: |
+      Bu xabardan sitata yaratish uchun @QuotlyBot-dan foydalaning
+    error:
+      reply: |
+        <b>Xato!</b>
+        Iltimos, stikerga javob yozing.
+      no_selected_pack: |
+        <b>Siz toʻplamni tanlamadingiz</b>
+
+        Iltimos, (/yangi) toʻplamni yarating yoki (/paketlar) tanlang
+      no_selected_group_pack: |
+        <b>Siz guruh paketini tanlamadingiz</b>
+
+        Iltimos, /packs buyrug'i orqali paketni tanlang
+      no_rights: |
+        <b>Xatolik!</b>
+        Sizda ushbu paketga stiker qo'shish huquqi yo'q.
+      stickers_too_much: |
+        Ushbu paketda stikerlarning maksimal soni mavjud.
+
+        Siz /new buyrug'i yordamida yangi paket yaratishingiz mumkin.
+      have_already: |
+        <b>Ushbu stiker allaqachon paketda</b>
+
+        Agar kulgichni o'zgartirmoqchi bo'lsangiz, uni quyidagi xabarga yuboring.
+      stickerset_invalid: |
+        <b>Xato!</b>
+        Bot joriy tanlangan paketingizga kira olmaydi.
+
+        Iltimos, yarating (/yangi) yoki boshqa paketni tanlang (/paketlar).
+      file_type:
+        static: |
+          <b>Xato!</b>
+          Bu fayl turi qoʻllab-quvvatlanmaydi
+          Siz ushbu rasm yoki statik stikerni statik toʻplamga qoʻshishingiz mumkin
+
+          <i>Yarating (/yangi) yoki tanlang (/paketlar) boshqa paket</i>
+        video: |
+          <b>Xato!</b>
+          Bu fayl turi qoʻllab-quvvatlanmaydi
+          Siz ushbu video fayllarni video toʻplamga qoʻshishingiz mumkin
+
+          <i>Yaratish (/yangi) yoki (/ ni tanlang) paketlar) boshqa paket</i>
+        animated: |
+          <b>Xato!</b>
+          Bu fayl turi qoʻllab-quvvatlanmaydi
+          Ushbu animatsiyali fayllarni vektor toʻplamiga qoʻshishingiz mumkin
+
+          <i>Yaratish (/yangi) yoki (/) ni tanlang. paketlar) boshqa paket</i>
+        unknown: |
+          <b>Xato!</b>
+          Bu fayl turi qoʻllab-quvvatlanmaydi
+
+          <i>Yarating (/yangi) yoki boshqa paketni tanlang (/paketlar)</i>
+      wait_load: |
+        <b>Kutib turing!</b>
+
+        Bot hali ham avvalgi faylni qayta ishlamoqda...
+        Qayta ishlash ustuvorligini oshirish va navbatga bir nechta stiker qo‘shish imkoniyatini oshirish uchun siz botni ishlab chiqishni (\/donate) qo‘llab-quvvatlashingiz mumkin.
+      timeout: |
+        <b>Ayni paytda bot juda katta yuklanishni boshdan kechirmoqda</b>
+        Shuning uchun video konvertatsiya faqat faol kuchaytirilgan paketlar uchun mavjud
+
+        Batafsil ma'lumot uchun / ehson qilish
+      convert: |
+        <b>Xato!</b>
+        Afsuski, bot videongizni aylantira olmadi.
+
+        Ehtimol, videongiz bot uchun tushunarsiz formatda saqlangandir. U mp4 formatida ekanligiga ishonch hosil qiling.
+        Bu botning ichki xatosi ham boʻlishi mumkin, bu videoni qayta yuborishga urinib koʻring.
+      too_big: |
+        <b>Xato!</b>.
+
+        Faylni qayta ishlash uchun juda katta. Yuborishdan oldin sifat va muddatni kamaytiring.
+news:
+  join: |
+    ℹ️ <a href="${link}">Bot haqidagi so'nggi yangiliklardan xabardor bo'lish uchun</a> kanalimizga qo'shiling.
+
+    <i>Bot haqidagi eng so'nggi yangiliklar, shuningdek, yangilanishlar va yangi xususiyatlarni olish uchun kanalga obuna bo'ling.</i>
+  join_btn: '📢 Kanalga qo''shiling'
+  not_joined: '🙅 Siz kanalga obuna bo''lmagansiz'
+  continue: '✅ Davom eting'
+userAbout:
+  help: |
+    <b>🧑‍🎨 Foydalanuvchi haqida</b>
+
+    Ushbu menyudan foydalanib siz foydalanuvchi va uning stiker paketlari haqida ma'lumot olishingiz mumkin
+
+    Foydalanuvchi haqida ma'lumot olish uchun tugmani bosing pastga yoki uning xabarini yo'naltiring
+  result: |
+    <b>🧑‍🎨 Фойдаланувчи ҳақида</b>
+    <b>🆔 Фойдаланувчи ID:</b> <code>${userId}</code>
+    <b>🎨 Ушбу фойдаланувчининг сақламалари:</b>
+    ${packs}
+  no_packs: |
+    <i>Bizda bu egasining stikerlari haqida hech qanday ma'lumot yo'q</i>
+  forward_hidden: |
+    Foydalanuvchi xabarlarni yo'naltirish imkoniyatini yashirgan. Uning stiker paketlarini ko'rish uchun quyidagi tugmadan foydalaning.
+  select_user: '🧑‍🎨 Foydalanuvchini tanlang'
+scenes:
+  new_pack:
+    pack_type: |
+      <b><u>Paket turini tanlang</u></b>
+    regular: '😊 Stiker'
+    custom_emoji: '🌟 Emoji (premium)'
+    static: '🌟 Static'
+    animated: '✨ Vektor'
+    video: '📹 Video'
+    pack_format: |
+      <b><u>Paket turini tanlang</u></b>
+
+      <b>Umumiy</b> - statik (harakat qilmang), rastr, fayl format - PNG qo'shishdan oldin (bot qayta ishlanmoqda), qo'shgandan keyin - WEBP.
+      Oddiy to'plamga misol - t.me/addstickers/Animals
+
+      <b>Video</b> - animatsion video to'plami. Siz har qanday video, gif va fotosuratni qo'shishingiz mumkin.
+      Namuna video to'plami - t.me/addstickers/TheMascot
+
+      <b>Animatsiyalangan</b> - animatsiyali, vektor (ular fayl ichidagi ob'ektlarning aniq tavsifiga ega bo'lishi kerak. ular har qanday miqyosda aniq ko'rsatiladi), fayl formati - TGS, Lottie formatining o'zgarishi.
+      Animatsion to'plamga misol - t.me/addstickers/IsabelleShizue
+
+      <i>Animatsion va video stikerlar to'plamida 50 tagacha stiker bo'lishi mumkin. Statik stikerlar to‘plamida 120 tagacha stiker bo‘lishi mumkin.</i>
+    pack_title: |
+      <b>Yangi stikerlar to'plami uchun nomni kiriting</b>
+      <i>Shuningdek pastda tasodifiy hosil bo'lgan nomni ham tanlashingiz mumkin</i>
+    pack_name: |
+      <b>Yangi stikerlar toʻplami uchun qisqa havolani kiriting:</b>
+
+      <i>Masalan, bu toʻplamda “Hayvonlar” qisqa havola sifatida ishlatiladi: https://t.me/ addstickers/<u>Hayvonlar</u></i>
+      <i>Tugmadagi tasodifiy qisqa havolani tanlashingiz mumkin.</i>
+    ok: |
+      <a href="${link}">${title}</a> toʻplami muvaffaqiyatli yaratildi!
+
+      <b>Paket havolasi:</b> <pre>${link}</pre>
+
+      Fayl, rasm, video yoki stiker yuboring, shunda men uni to'plamingizga qo'shing
+    error:
+      title_long: Ism ${max} belgidan oshmasligi kerak.
+      name_long: Manzil ${max} belgidan oshmasligi kerak.
+      telegram:
+        name_invalid: Ushbu manzilni ishlatib bo'lmaydi.
+        name_occupied: Ushbu manzil band.
+        upload_failed: |
+          <b>Xato!</b>
+          Bot Telegram’ga stiker yuklay olmaydi.
+
+          Iltimos, keyinroq qayta urinib ko'ring.
+  copy:
+    enter: |
+      Men uni nusxalashim mumkin, lekin undan oldin yangi paket yarataylik
+    progress: |
+      <a href="${originalLink}">${originalTitle}</a> дан <a href="${link}">${title}</a> гуруҳига нусҳа олиш
+
+      Бажарилмоқда: ${current}/${total}
+    done: |
+      <a href="${originalLink}">${originalTitle}</a> dan <a href="${link}">${title}</a> gacha toʻplamdan nusxalash muvaffaqiyatli yakunlandi.
+    pay: |
+      <b>O'ram konvertatsiyasi</b>
+
+      Bir turdagi o'ramni boshqa turga aylantirish 1 kredit turadi
+
+      <b>Joriy balans:</b> ${balance} Kreditlar
+
+      Kredit sotib olish: /donate
+    pay_btn: '✅ Confirm'
+    error:
+      premium: |
+        <b>Tizimda Xatolik! </b>
+        Afsuski, bu funksiya faqat botni qo'llab-quvatlagan foydalanuvchilargagina mavjud.
+
+        Siz buni \/donate buyrug'ini yuborish orqali qilishingiz mumkin.
+  original:
+    enter: |
+      Ushbu bot orqali qo'shilgan stikerni yuboring va men sizga asl nusxasini ko'rsataman.
+    error:
+      not_found: |
+        <b>Tizimda xatolik!</b>
+        Ushbu stikerning asl nusxasini topolmadim.
+  delete:
+    enter: |
+      Ushbu bot orqali qo'shilgan stikerni yuboring, men uni paketdan o'chirib tashlayman.
+    confirm: |
+      Haqiqatan ham bu stikerni oʻchirib tashlamoqchimisiz?
+    error:
+      not_found: |
+        <b>Xato!</b>
+        Stikerni topa olmadim.
+  rename:
+    enter_name: |
+      <b> <a href="${link}">${title}</a>uchun yangi nom kiriting:</b>
+    success: |
+      <b>Sarlavha muvaffaqiyatli o'zgartirildi!</b>
+
+      Yangi nom: <a href="${link}">${title}</a>
+    boost_notice: |
+      ❕ "<code>${titleSuffix}</code>" qo'shimchani olib tashlash uchun, siz qutini boost qilishingiz kerak. Batafsil ma'lumot olish uchun menyuga tashrif buyuring:\/donate
+  packAbout:
+    enter: |
+      <b>Bu haqda ma'lumot olish uchun menga stiker yoki maxsus kulgich yuboring:</b>
+    not_found: |
+      Stikerni topa olmadim
+    result: |
+      <b>📦 Гуруҳ:</b> <a href="${link}">${name}</a>
+      🆔 <code>${setId}</code> <i>(Сақлама ёкига учун махсус рақам, ўзига хос вақтида кенгайтирилади)</i>
+
+      🧑‍🎨 Сақлама эгаси ID: <code>${ownerId}</code>
+      ${mention}
+
+      <b>🎨 Бошқа сақламалар ушбу эгасидан:</b>
+      ${otherPacks}
+    no_other_packs: |
+      <i>Ushbu egasining boshqa stikerlari haqida bizda ma'lumot yo'q</i>
+  boost:
+    sure: |
+      <b>Haqiqatan ham <a href="${link}">${title}</a> ni kuchaytirmoqchimisiz?</b>
+
+      Kuchaytirish qayta ishlashni ustuvor qilish va qayta ishlash navbatiga bir nechta stiker qo'shish imkoniyatini oshiradi
+      Kuchaytirish haqida batafsil ma'lumotni menyuda /donate orqali olishingiz mumkin
+
+      <b>Narx:</b> 1 Kredit
+      <b>Joriy balans:</b> ${balance} Kreditlar
+    btn:
+      yes: Ha, kuchaytiring!
+      no: Yo'q, bekor qiling
+    canceled: |
+      Kuchaytirish bekor qilindi
+    success: |
+      Boost muvaffaqiyatli yakunlandi!
+
+      ${title} endi kuchaytirildi
+    error:
+      not_enough_credits: |
+        Bu o'ram uchun kuchaytirish yetarli Kreditlarga ega emassiz.
+
+        Balansingizni to'ldirish uchun /donate buyrug'ini yuborishingiz mumkin.
+      already_boosted: |
+        Bu paket allaqachon kuchaytirilgan.
+  catalog:
+    publish:
+      publish_new: |
+        👌 <b>Бажаришдан гуруҳ стикерини маҳсул кўлдириш</b>
+
+        <i>Сизга тегишли бўлса, бўш майдоний стикерларни ҳам бажариш имконияти бор</i>
+      owner_proof: |
+        <b>Ushbu paketning egaligini tasdiqlash uchun siz bir necha oddiy amallarni bajarishingiz kerak:</b>
+        1. @Stickers botini oching
+        2. <code>yuboring /packstats</code> buyrug'i
+        3. Kerakli paketni toping va tanlang
+        4. Qabul qilingan xabarni botga yo'naltiring
+      publish_new_access_denied: |
+        <b>Xato!</b>
+        Bu paket sizniki emas.
+
+        Siz faqat o'zingizning paketlaringizni nashr qilishingiz mumkin
+      bannded: |
+        <b>Xato!</b>
+        Sizga ushbu xususiyatdan foydalanish taqiqlangan.
+        Iltimos, administratorga murojaat qiling.
+      enter: |
+        Siz "<a href="${link}">${title}</a>" to'plamini botimizning umumiy katalogida nashr qilmoqchisiz
+        Uni botning istalgan foydalanuvchisi nomi, teglari yoki filtri orqali topishi mumkin.
+        Shu sababli paketingizni ko'proq odamlar o'rnatadilar
+        Ko'p odamlarni qiziqtiradigan faqat yuqori sifatli paketlarni yuborishga harakat qiling
+
+        <b>Qoidalar to'plamlarni nashr qilish uchun:</b>
+        • Tor doiradagi odamlar uchun mo'ljallangan shaxsiy to'plamlaringizni nashr qilmang. Masalan, doʻstlaringizning yuzlari yoki xabarlaringizdan iqtiboslar
+        • Yevropa Ittifoqi qonunlarini yoki boshqa mahalliy qonunlarni buzuvchi stiker bosimlarini joylashtirmang
+
+        Buning uchun qoʻshimcha maʼlumotlarni taqdim etishingiz kerak boʻladi. katalogida chop etilgan
+      continue_button: Davom eting
+      enter_description: |
+        <b>To'plamingizni boshqalar topa olishi uchun qisqacha ta'riflang</b>
+
+        <i>Siz [#]</i>
+        turkumlash uchun heshteglardan ham foydalanishingiz mumkin.<i>Masalan: #anime #mem #hayvonlar #cute #kpop #kulgili #mushuk #o'yin </i>
+      select_language: |
+        <b>Paketingiz qaysi tillar uchun ekanligini tanlang:</b>
+        <i>Siz bir nechta tillarni tanlashingiz mumkin</i>
+      button_all_languages: All languages
+      button_confirm_language: Confirm
+      set_safe: |
+        <b>Sizning paketingiz foydalanuvchilar uchun xavfsizmi?</b>
+        <i>Ya'ni, unda erotik va boshqa hayratlanarli kontent mavjud emas</i>
+      button_safe:
+        safe: Yes, it is safe
+        not_safe: No, it is not safe
+      no_tags: belgilanmagan
+      confirm: |
+        <b>Гуруҳни “<a href="${link}">${title}</a>” чоп этишни тасдиқлаш</b>
+
+        <b>Тавсиф:</b> <i>${description}</i>
+
+        <b>Теглар:</b> ${tags}
+        <b>Тиллар:</b> ${languages}
+      button_confirm: '✅ Confirm publication'
+      success: |
+        Tabriklaymiz, sizning paketingiz boshqa foydalanuvchilar topa oladigan botimizning umumiy katalogida chop etildi!
+
+        Paketni qidirish ma'lumotlarini /packs buyrug'i bilan to'plamni tanlash orqali tahrirlashingiz mumkin.
+
+        <i>Sizga shuni eslatib o'tamizki, paketingiz statistikasini @Stickers rasmiy boti orqali ko'rish mumkin</i>
+    unpublish:
+      success: |
+        Paket bot katalogidan muvaffaqiyatli olib tashlandi.
+  delete_pack:
+    enter: |
+      Haqiqatan ham <a href="${link}">${title}</a>toʻplamini oʻchirib tashlamoqchimisiz?
+      U butunlay oʻchirib tashlanadi va uni qayta tiklab boʻlmaydi.
+
+      Agar siz faqat bitta stikerni oʻchirmoqchi boʻlsangiz, /delete buyrugʻidan foydalaning.
+
+      Ushbu paketni haqiqatan ham oʻchirib tashlamoqchi ekanligingizni tasdiqlash uchun <code>${confirm}</code> yuboring.
+    confirm: Ha, men mutlaqo aminman.
+    success: |
+      <b>Toʻplam muvaffaqiyatli oʻchirildi!</b>
+    error:
+      - <b>Xato!</b>
+      - Opps, nimadir xato ketdi.
+  frame:
+    no_video: |
+      <b>Xato!</b>
+      Siz faqat video paketlarga ramkalar qo'shishingiz mumkin.
+    select_type: |
+      <a href="${example}">&#8203;</a><b>Рамкани танлаш:</b>
+      Рамка - стикернинг о̄рақда майдонлари бўлими
+
+      <code>lite</code> — кўрсатмалар бир нечта кенгайтган бўлиди
+      <code>medium</code> — кўрсатмалар кенгайтирилган
+      <code>rounded</code> — кўрсатмалар кенгайишидан ўзигача кенгайтирилган
+      <code>square</code> — рамка дайриИк ко̄рсатқич, бундан ташқари у онга ўзгартирилмайди
+      <code>circle</code> — рамка ай югурт формаида
+
+      <i>Келаида, келаида рамкани тузатиш учун команда ишлаб чикарасиз</i>
+    types:
+      lite: '1. Lite'
+      medium: '2. O''rta'
+      rounded: '3. Dumaloq'
+      square: '4. Kvadrat'
+      circle: '5. Doira'
+    selected: |
+      <b>Tanlangan ramka turi:</b> ${type}
+  photoClear:
+    enter: |
+      Orqa fonni olib tashlamoqchi bo'lgan <u>rasmini</u> yuboring va men faylni fonsiz yuboraman
+
+      <i>Fotosuratlar bilan yaxshi ishlaydi. Chizmalar, rasmlar va boshqalar bilan yomonroq ishlaydi.</i>
+    enter_anime: |
+      Тусанча фонини ўчириш қисматидан уч учрамаликадан рақмий олинган фотони юборинг ва мәқул ҳолатда олишим
+    choose_model: |
+      <b>Modelni tanlang:</b>
+    web_app: WebApp - odamlar bilan suratga olish uchun
+    model:
+      ordinary: Umumiy — odamlar bilan suratga olish uchun
+      general: Umumiy - har qanday fotosuratlar uchun
+      anime: Anime — anime rasmlari uchun
+    add_to_set_btn: '🌟 Toʻplamga qoʻshish'
+    error: |
+      <b>Xato!</b>
+      Op, nimadir xato ketdi.
+  leave: |
+    Harakat bekor qilindi.
+  btn:
+    cancel: '❌ Bekor qilish'
+error:
+  telegram: |
+    <b>Telegram xatolikni qaytardi!</b>
+    <code>${error}</code>
+  answerCbQuery:
+    telegram: |
+      Telegram xatolikni qaytardi:
+      ${error}
+  banned: |
+    <b>Xato!</b>
+    Sizga ushbu xususiyatdan foydalanish taqiqlangan.
+
+    <i>Agar bu xato deb o'ylasangiz, administratorga murojaat qiling: @ly_oBot</i>
+  unknown: |
+    <b>An unknown error has occurred, please try again.</b>
+
+    If the problem persists, then write to @Ly_oBot.
+    Please write immediately about which bot you are talking about and describe the problem in detail in one message.
